@@ -11,5 +11,9 @@ app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/stratuslit/'}),
 );
 
+app.get('/weather', (request, response)=>{
+    res.json({"Hello" : "Hello"})
+});
+
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);

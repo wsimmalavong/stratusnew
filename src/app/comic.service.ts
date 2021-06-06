@@ -9,7 +9,7 @@ export class ComicService {
   constructor(private http: HttpClient) {}
 
   get(){
-    const url = `https://xkcd.com/641/info.0.json`;
+    const url = `/weather`;
     return this.http.get<Comic>(url);
   }
 }

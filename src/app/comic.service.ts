@@ -9,7 +9,7 @@ export class ComicService {
   constructor(private http: HttpClient) {}
 
   get(){
-    const url = `/weather`;
+    const url = `comicinfo`;
     return this.http.get<Comic>(url);
   }
 }

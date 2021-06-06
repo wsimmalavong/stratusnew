@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-
+import { Comic } from "./comic/comic.model";
 @Injectable({
   providedIn: 'root'
 })
 export class ComicService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+
   get(){
-    const url = `https://xkcd.com/info.0.json`;
-    return this.http.get<any[]>(url);
+    const url = `https://xkcd.com/641/info.0.json`;
+    return this.http.get<Comic>(url);
   }
 }

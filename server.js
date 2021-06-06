@@ -7,12 +7,14 @@ const app = express();
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/stratuslit'));
+
 app.use(cors());
+
 const info = require('./app');
 
 app.use('/comicinfo', info)
 
-app.get('/*', (req, res) => 
+app.get('*', (req, res) => 
     res.sendFile('index.html', {root: 'dist/stratuslit/'}),
 );
 
